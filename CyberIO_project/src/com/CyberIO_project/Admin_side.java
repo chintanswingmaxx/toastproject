@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import com.CyberIO_project.Environment;
 
 public class Admin_side {
 	WebDriver driver;
@@ -14,7 +15,7 @@ public class Admin_side {
 
 			try {
 				System.setProperty("Webdriver.chrome.driver",
-						"C:\\Users\\HP\\Downloads\\chromedriver_win32\\chromedriver.exe");
+						new Environment().getPath());
 
 				driver = new ChromeDriver();
 				driver.manage().deleteAllCookies();
